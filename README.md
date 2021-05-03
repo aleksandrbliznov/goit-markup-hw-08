@@ -1,2 +1,2 @@
 # goit-markup-hw-08
-GoIT homework 8
+Fully editet project GoIT Homework 8
