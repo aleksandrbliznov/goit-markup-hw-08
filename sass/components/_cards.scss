@@ -1,0 +1,165 @@
+.cards {
+  margin-top: calc(40px - 7.5px);
+
+  @media (min-width: $tablet) {
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  & .cards_link {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: $pc) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &:not(:first-child) {
+    margin-top: 30px;
+    @media (min-width: $tablet) {
+      margin: 0;
+    }
+  }
+}
+
+.card_img {
+  width: 100%;
+}
+
+.card_title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $primary-titles-color;
+  margin: 0;
+}
+
+.card_description {
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+  color: $text-gray;
+  margin: 4px 0 0 0;
+}
+
+//  CARD FOOTER
+
+.card_footer {
+  position: relative;
+  background-color: $white;
+  border: 1px solid #eee;
+  border-top: none;
+  padding: 20px 24px;
+  height: auto;
+}
+
+@media (min-width: $tablet) and (max-width: 1199.9px) {
+
+.card_footer.bugged-footer {
+  height: 146.6px;
+}
+
+}
+
+//  CARD FILTER
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    justify-content: center;
+  }
+}
+
+.filters_item {
+  @media (max-width: 767px) {
+    padding: 7.5px 4px;
+  }
+  @media (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+
+.filter_button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $primary-titles-color;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+  background-color: $bg-light;
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $primary-blue-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+//  OVERLAY
+
+.card_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 110px;
+  left: 0;
+  padding: 63px 24px;
+
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(100%);
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .card:hover &,
+  .card:focus & {
+    transform: translatey(0);
+  }
+}
+
+.overlay_text {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  margin: 0;
+  color: $white;
+}
+
+

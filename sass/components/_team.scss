@@ -1,3 +1,23 @@
+.team {
+  background-color: $bg-light;
+}
+
+.team_title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $primary-titles-color;
+  margin: 0;
+
+  @media (min-width: $pc) {
+    font-size: 36px;
+  }
+}
+
+// TEAM CARD FOOTER
+
 .team_item-footer {
   background-color: $white;
   padding: 30px 0 30px 0;
@@ -56,4 +76,40 @@
 .social_icon {
   width: 20px;
   height: 20px;
+}
+
+//  TEAM LIST
+
+.team_list {
+  margin-top: 50px;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $pc) {
+    display: flex;
+  }
+}
+
+.team_item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  & > img {
+    width: 100%;
+  }
 }

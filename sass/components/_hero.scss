@@ -1,0 +1,68 @@
+.hero {
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: url('../images/hero-bg@2x.jpg');
+    }
+  }
+
+  background-color: $bg-dark;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 200px 0;
+}
+
+.hero_title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 26px;
+  line-height: 1.6;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+
+  color: $white;
+
+  @media (min-width: $pc) {
+    font-size: 44px;
+  }
+}
+
+.hero_button {
+  display: inline-block;
+
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.875;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  background-color: $primary-blue-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  padding: 10px 32px;
+
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background: $btn-hover-color;
+  }
+}
+
+
