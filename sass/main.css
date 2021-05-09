@@ -515,6 +515,10 @@ img {
   margin-top: auto;
 }
 
+.menu_list {
+  margin-bottom: auto;
+}
+
 .contact_item-mail {
   margin-top: 32px;
 }
@@ -565,7 +569,7 @@ img {
   background-size: cover;
   background-position: center;
   text-align: center;
-  padding: 200px 0;
+  padding: 118px 0;
 }
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
